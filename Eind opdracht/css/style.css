@@ -1,3 +1,7 @@
+p {
+  letter-spacing: 0.4px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +14,14 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+.bottom-line {
+  height: 3px;
+  width: 100%;
+  background-color: #eb5e28;
+  position: fixed;
+  top: 80px;
 }
 
 nav > label {
@@ -112,29 +124,39 @@ nav > label.active i {
 }
 
 nav {
+  position: fixed;
+  top: 0;
   background-color: #ccc5b9;
   height: 80px;
   color: rgb(29, 29, 29);
   width: 100%;
   margin: 0 auto;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 
 main {
   width: 80%;
   margin: 0 auto;
-  margin-top: 25px;
+  margin-top: 105px;
+  margin-bottom: 48px;
   color: rgb(29, 29, 29);
+}
+
+a {
+  color: #eb5e28;
+  transition: all 0.2s;
+}
+
+a:hover {
+  color: #252422;
 }
 
 .section {
   width: 95%;
+  border-radius: 10px;
   background-color: #ccc5b9;
-  border-radius: 5px;
   margin: 0 auto;
   margin-bottom: 20px;
-  padding: 30px;
+  padding: 25px;
   color: rgb(29, 29, 29);
 }
 
@@ -149,11 +171,23 @@ main {
 
 .section > h1 {
   margin-bottom: 18px;
-  font-size: 30px;
+  font-size: 48px;
 }
 
 .section > p {
-  font-size: 18px;
+  font-size: 28px;
+}
+
+.section > ol {
+  padding: 0 30px;
+}
+
+.section > ol > li {
+  font-size: 20px;
+}
+
+.section > ol > p {
+  margin-bottom: 10px;
 }
 
 .foto_container {
@@ -162,7 +196,7 @@ main {
   margin: 20px 0;
 }
 
-.foto_container > img {
+.foto_container > a > img {
   width: 100%;
 }
 
@@ -237,6 +271,14 @@ main.contact {
   color: rgb(29, 29, 29);
 }
 
+.contact-container > form > div > label {
+  font-size: 20px;
+  border-radius: 5px;
+  padding: 5px;
+  border: none;
+  color: rgb(29, 29, 29);
+}
+
 .contact-container > form > input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
   color: fffcf2;
 }
@@ -255,7 +297,17 @@ main.contact {
   font-weight: normal;
 }
 
+.top-line {
+  background-color: #eb5e28;
+  width: 100%;
+  height: 3px;
+  position: fixed;
+  bottom: 45px;
+}
+
 footer {
+  position: fixed;
+  bottom: 0;
   margin-top: auto;
   color: rgb(29, 29, 29);
   text-align: center;
@@ -264,8 +316,6 @@ footer {
   width: 100%;
   background-color: #ccc5b9;
   font-size: 18px;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
 @media (max-width: 900px) {
@@ -281,7 +331,7 @@ footer {
 }
 @media (max-width: 790px) {
   nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
   }
@@ -292,6 +342,7 @@ footer {
   }
   main {
     margin-top: 100px;
+    margin-bottom: 68px;
   }
   .nav-links {
     margin-top: -10px;
@@ -313,7 +364,6 @@ footer {
     text-align: center;
     transition: all 0.2s;
     padding-top: 10px;
-    border-top: #eb5e28 solid 5px;
   }
   .nav-links > li {
     display: block;
@@ -328,5 +378,8 @@ footer {
   }
   .foto_container {
     grid-template-columns: 1fr;
+  }
+  .top-line {
+    bottom: 68px;
   }
 }/*# sourceMappingURL=style.css.map */
